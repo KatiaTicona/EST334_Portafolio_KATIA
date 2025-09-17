@@ -2,44 +2,130 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio EST334 - Katia Ticona</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Digital - Katia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f7e9ff, #e3d1ff);
+      color: #333;
+    }
+
+    header {
+      background-color: #7b2cbf;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #7b2cbf;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #5a189a;
+      border-bottom: 2px solid #5a189a;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #5a189a;
+      border-bottom: 2px solid #e0aaff;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #f9f0ff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #7b2cbf;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Portafolio Digital - EST334</h1>
-    <p>Estudiante: Katia Ticona | Curso: Estadística Espacial</p>
+    <h1>🌍 Portafolio Digital - Katia</h1>
+    <p>Curso EST334 | Análisis Espaciales y Geoestadística</p>
   </header>
 
   <nav>
-    <a href="#proyectos">Proyectos Espaciales</a>
-    <a href="#gis">Análisis GIS</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#analisis">Análisis GIS</a>
     <a href="#geoestadistica">Geoestadística</a>
   </nav>
 
-  <section id="intro">
-    <h2>Introducción</h2>
-    <p>Este portafolio reúne mis trabajos del curso EST334, incluyendo mapas,
-       análisis espaciales y modelado geoestadístico (kriging). 
-       Todos los proyectos están documentados y acompañados de resultados visuales.</p>
-  </section>
-
   <section id="proyectos">
-    <h2>📌 Proyectos Espaciales</h2>
-    <p>Aquí se muestran los mapas temáticos y análisis de áreas específicas.</p>
-    <img src="Proyectos_Espaciales/mapa1.png" alt="Mapa ejemplo" width="400">
+    <h2>🚀 Proyectos Espaciales</h2>
+    <div class="card">
+      <h3>Proyecto 1</h3>
+      <p>Descripción breve del proyecto espacial desarrollado.</p>
+    </div>
+    <div class="card">
+      <h3>Proyecto 2</h3>
+      <p>Descripción breve del análisis espacial.</p>
+    </div>
   </section>
 
-  <section id="gis">
-    <h2>📌 Análisis GIS</h2>
-    <p>Ejercicios prácticos en QGIS/ArcGIS.</p>
-    <img src="Analisis_GIS/buffer.png" alt="Resultado GIS" width="400">
+  <section id="analisis">
+    <h2>🗺️ Análisis GIS</h2>
+    <div class="card">
+      <h3>Mapa 1</h3>
+      <p>Mapa documentado con su respectiva interpretación.</p>
+    </div>
   </section>
 
   <section id="geoestadistica">
-    <h2>📌 Geoestadística - Kriging</h2>
-    <p>Modelos de variogramas e interpolaciones espaciales.</p>
-    <img src="Geoestadistica/kriging.png" alt="Mapa kriging" width="400">
+    <h2>📊 Modelado Kriging y Geoestadística</h2>
+    <div class="card">
+      <h3>Ejercicio de Kriging</h3>
+      <p>Resultados del modelado de superficies con Kriging.</p>
+    </div>
   </section>
 
   <footer>
@@ -47,4 +133,3 @@
   </footer>
 </body>
 </html>
-
