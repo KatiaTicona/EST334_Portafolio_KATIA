@@ -1,135 +1,536 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Digital - Katia</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f7e9ff, #e3d1ff);
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadística Espacial | Katia Daishy Ticona Casa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      background-color: #7b2cbf;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 5px;
-    }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
 
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
+        header h1 {
+            color: #c94b4b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
 
-    nav a {
-      text-decoration: none;
-      color: #7b2cbf;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+        header h2 {
+            color: #666;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
 
-    nav a:hover {
-      color: #5a189a;
-      border-bottom: 2px solid #5a189a;
-    }
+        .student-info {
+            background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
 
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    }
+        .student-info h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
 
-    section h2 {
-      color: #5a189a;
-      border-bottom: 2px solid #e0aaff;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
 
-    .card {
-      background: #f9f0ff;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+        }
 
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
-    }
+        .info-item strong {
+            display: block;
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #7b2cbf;
-      color: white;
-      margin-top: 30px;
-    }
-  </style>
+        .units-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .unit-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 3px solid rgba(201, 75, 75, 0.3);
+        }
+
+        .unit-header {
+            background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        .unit-header h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .unit-date {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .unit-content {
+            padding: 30px;
+        }
+
+        .work-card {
+            background: white;
+            border: 2px dashed #ddd;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .work-card:hover {
+            border-color: #c94b4b;
+            border-style: solid;
+            box-shadow: 0 10px 25px rgba(201, 75, 75, 0.2);
+        }
+
+        .work-title {
+            color: #c94b4b;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .work-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .map-icon-container {
+            text-align: center;
+            padding: 40px 0;
+            margin: 20px 0;
+        }
+
+        .map-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        .map-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: #c94b4b;
+        }
+
+        .icon-text {
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-pdf {
+            background: #c94b4b;
+            color: white;
+            box-shadow: 0 5px 15px rgba(201, 75, 75, 0.3);
+        }
+
+        .btn-pdf:hover {
+            background: #a83d3d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 75, 75, 0.4);
+        }
+
+        .btn-code {
+            background: #2e86de;
+            color: white;
+            box-shadow: 0 5px 15px rgba(46, 134, 222, 0.3);
+        }
+
+        .btn-code:hover {
+            background: #1e6bb8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(46, 134, 222, 0.4);
+        }
+
+        .btn-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .github-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .github-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(201, 75, 75, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header h2 {
+                font-size: 1.2em;
+            }
+
+            .units-container {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>🌍 Portafolio Digital - Katia</h1>
-    <p>Curso EST334 | Análisis Espaciales y Geoestadística</p>
-  </header>
+    <div class="container">
+        <header>
+            <h1>📊 Estadística Espacial</h1>
+            <h2>Portafolio de Trabajos Académicos</h2>
+            
+            <div class="student-info">
+                <h3>👩‍🎓 Katia Daishy Ticona Casa</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Curso</strong>
+                        EST334 - Estadística Espacial
+                    </div>
+                    <div class="info-item">
+                        <strong>Docente</strong>
+                        TORRES CRUZ FRED
+                    </div>
+                    <div class="info-item">
+                        <strong>Año Académico</strong>
+                        2025 - Segundo Semestre
+                    </div>
+                    <div class="info-item">
+                        <strong>Universidad</strong>
+                        Universidad Nacional del Altiplano
+                    </div>
+                </div>
+            </div>
+        </header>
 
-  <nav>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#analisis">Análisis GIS</a>
-    <a href="#geoestadistica">Geoestadística</a>
-  </nav>
+        <div class="units-container">
+            <!-- UNIDAD I -->
+            <div class="unit-section">
+                <div class="unit-header">
+                    <div class="unit-date">10 Sept 2025</div>
+                    <h2>I UNIDAD</h2>
+                    <p>Fundamentos de Análisis Espacial</p>
+                </div>
+                
+                <div class="unit-content">
+                    <!-- Trabajo 1 -->
+                    <div class="work-card">
+                        <div class="work-title">Posicionamiento de Información</div>
+                        <div class="work-description">
+                            Posicionamiento de una variable en la región de Puno
+                        </div>
+                        
+                        <div class="map-icon-container">
+                            <div class="map-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
+                        </div>
+                        
+                        <div class="buttons-container">
+                            <a href="#" class="btn btn-pdf">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                                Ver PDF
+                            </a>
+                            <a href="#" class="btn btn-code">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                                Código R
+                            </a>
+                        </div>
+                    </div>
 
-  <section id="proyectos">
-    <h2>🚀 Proyectos Espaciales</h2>
-    <div class="card">
-      <h3>Proyecto 1</h3>
-      <p>Descripción breve del proyecto espacial desarrollado.</p>
+                    <!-- Trabajo 2 -->
+                    <div class="work-card">
+                        <div class="work-title">Muestreo Bootstrap</div>
+                        <div class="work-description">
+                            Escribe un fragmento de código que realice el muestreo por bootstrap considerando principios de aleatoriedad
+                        </div>
+                        
+                        <div class="map-icon-container">
+                            <div class="map-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
+                        </div>
+                        
+                        <div class="buttons-container">
+                            <a href="#" class="btn btn-pdf">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                                Ver PDF
+                            </a>
+                            <a href="#" class="btn btn-code">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                                Código R
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 3 -->
+                    <div class="work-card">
+                        <div class="work-title">Método Gaussian Random</div>
+                        <div class="work-description">
+                            Análisis de una variable con el método de Gaussian Random
+                        </div>
+                        
+                        <div class="map-icon-container">
+                            <div class="map-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
+                        </div>
+                        
+                        <div class="buttons-container">
+                            <a href="#" class="btn btn-pdf">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                                Ver PDF
+                            </a>
+                            <a href="#" class="btn btn-code">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                                Código R
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNIDAD II -->
+            <div class="unit-section">
+                <div class="unit-header">
+                    <div class="unit-date">16 Sept 2025</div>
+                    <h2>II UNIDAD</h2>
+                    <p>Geoestadística y Modelado Espacial</p>
+                </div>
+                
+                <div class="unit-content">
+                    <!-- Trabajo 1 -->
+                    <div class="work-card">
+                        <div class="work-title">Análisis Variográfico</div>
+                        <div class="work-description">
+                            Construcción y ajuste de variogramas experimentales para análisis de autocorrelación espacial
+                        </div>
+                        
+                        <div class="map-icon-container">
+                            <div class="map-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
+                        </div>
+                        
+                        <div class="buttons-container">
+                            <a href="#" class="btn btn-pdf">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                                Ver PDF
+                            </a>
+                            <a href="#" class="btn btn-code">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                                Código R
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 2 -->
+                    <div class="work-card">
+                        <div class="work-title">Interpolación Kriging</div>
+                        <div class="work-description">
+                            Aplicación de técnicas de kriging ordinario y universal para predicción espacial
+                        </div>
+                        
+                        <div class="map-icon-container">
+                            <div class="map-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
+                        </div>
+                        
+                        <div class="buttons-container">
+                            <a href="#" class="btn btn-pdf">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                                Ver PDF
+                            </a>
+                            <a href="#" class="btn btn-code">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                                Código R
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 3 -->
+                    <div class="work-card">
+                        <div class="work-title">Modelado de Superficies</div>
+                        <div class="work-description">
+                            Generación de superficies continuas mediante técnicas de modelado espacial avanzado
+                        </div>
+                        
+                        <div class="map-icon-container">
+                            <div class="map-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
+                        </div>
+                        
+                        <div class="buttons-container">
+                            <a href="#" class="btn btn-pdf">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                                </svg>
+                                Ver PDF
+                            </a>
+                            <a href="#" class="btn btn-code">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                                Código R
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3>📚 Estadística Espacial - EST334</h3>
+            <p><strong>Estudiante:</strong> Katia Daishy Ticona Casa</p>
+            <p><strong>Docente:</strong> TORRES CRUZ FRED</p>
+            <p><strong>Universidad Nacional del Altiplano - Puno</strong></p>
+            <p style="margin-top: 10px; opacity: 0.8;">2025 - Segundo Semestre</p>
+            <a href="https://github.com/katia-ticona/est334-estadistica-espacial" class="github-link" target="_blank">
+                📂 Ver Repositorio en GitHub
+            </a>
+        </footer>
     </div>
-    <div class="card">
-      <h3>Proyecto 2</h3>
-      <p>Descripción breve del análisis espacial.</p>
-    </div>
-  </section>
-
-  <section id="analisis">
-    <h2>🗺️ Análisis GIS</h2>
-    <div class="card">
-      <h3>Mapa 1</h3>
-      <p>Mapa documentado con su respectiva interpretación.</p>
-    </div>
-  </section>
-
-  <section id="geoestadistica">
-    <h2>📊 Modelado Kriging y Geoestadística</h2>
-    <div class="card">
-      <h3>Ejercicio de Kriging</h3>
-      <p>Resultados del modelado de superficies con Kriging.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Katia Ticona | Portafolio EST334</p>
-  </footer>
 </body>
 </html>
