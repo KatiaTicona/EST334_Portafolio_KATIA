@@ -1,264 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadística Espacial | Katia Daishy Ticona Casa</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EST334 — Portafolio | KATIA</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>📊 Estadística Espacial</h1>
-            <h2>Portafolio de Trabajos Académicos</h2>
-            
-            <div class="student-info">
-                <h3>👩‍🎓 Katia Daishy Ticona Casa</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <strong>Curso</strong>
-                        EST334 - Estadística Espacial
-                    </div>
-                    <div class="info-item">
-                        <strong>Docente</strong>
-                        TORRES CRUZ FRED
-                    </div>
-                    <div class="info-item">
-                        <strong>Año Académico</strong>
-                        2025 - Segundo Semestre
-                    </div>
-                    <div class="info-item">
-                        <strong>Universidad</strong>
-                        Universidad Nacional del Altiplano
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <div class="units-container">
-            <!-- UNIDAD I -->
-            <div class="unit-section">
-                <div class="unit-header">
-                    <div class="unit-date">10 Sept 2025</div>
-                    <h2>I UNIDAD</h2>
-                    <p>Fundamentos de Análisis Espacial</p>
-                </div>
-                
-                <div class="unit-content">
-                    <!-- Trabajo 1 -->
-                    <div class="work-card">
-                        <div class="work-title">Posicionamiento de Información</div>
-                        <div class="work-description">
-                            Posicionamiento de una variable en la región de Puno
-                        </div>
-                        
-                        <div class="map-icon-container">
-                            <div class="map-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" opacity="0.3"/>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
-                        </div>
-                        
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-pdf">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
-                                </svg>
-                                Ver PDF
-                            </a>
-                            <a href="#" class="btn btn-code">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                                Código R
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Trabajo 2 -->
-                    <div class="work-card">
-                        <div class="work-title">Muestreo Bootstrap</div>
-                        <div class="work-description">
-                            Escribe un fragmento de código que realice el muestreo por bootstrap considerando principios de aleatoriedad
-                        </div>
-                        
-                        <div class="map-icon-container">
-                            <div class="map-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
-                        </div>
-                        
-                        <div class="buttons-container">
-                            <a href="unidad-1/Ejemplo Muestreo Bootstrap/Muestreo-por-Bootstrap.pdf" 
-                                class="btn btn-pdf" target="_blank">
-                                Ver PDF
-                            </a>
-                            <a href="#" class="btn btn-code">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                                Código R
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Trabajo 3 -->
-                    <div class="work-card">
-                        <div class="work-title">Método Gaussian Random</div>
-                        <div class="work-description">
-                            Análisis de una variable con el método de Gaussian Random
-                        </div>
-                        
-                        <div class="map-icon-container">
-                            <div class="map-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
-                        </div>
-                        
-                        <div class="buttons-container">
-                            <a href="unidad-1/Gaussian Random Fields/Analisis-Gaussian-Random.pdf" 
-                                class="btn btn-pdf" target="_blank">
-                                Ver PDF
-                            </a>
-
-                            <a href="#" class="btn btn-code">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                                Código R
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UNIDAD II -->
-            <div class="unit-section">
-                <div class="unit-header">
-                    <div class="unit-date">16 Sept 2025</div>
-                    <h2>II UNIDAD</h2>
-                    <p>Geoestadística y Modelado Espacial</p>
-                </div>
-                
-                <div class="unit-content">
-                    <!-- Trabajo 1 -->
-                    <div class="work-card">
-                        <div class="work-title">Análisis Variográfico</div>
-                        <div class="work-description">
-                            Construcción y ajuste de variogramas experimentales para análisis de autocorrelación espacial
-                        </div>
-                        
-                        <div class="map-icon-container">
-                            <div class="map-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
-                        </div>
-                        
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-pdf">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
-                                </svg>
-                                Ver PDF
-                            </a>
-                            <a href="#" class="btn btn-code">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                                Código R
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Trabajo 2 -->
-                    <div class="work-card">
-                        <div class="work-title">Interpolación Kriging</div>
-                        <div class="work-description">
-                            Aplicación de técnicas de kriging ordinario y universal para predicción espacial
-                        </div>
-                        
-                        <div class="map-icon-container">
-                            <div class="map-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
-                        </div>
-                        
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-pdf">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
-                                </svg>
-                                Ver PDF
-                            </a>
-                            <a href="#" class="btn btn-code">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                                Código R
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Trabajo 3 -->
-                    <div class="work-card">
-                        <div class="work-title">Modelado de Superficies</div>
-                        <div class="work-description">
-                            Generación de superficies continuas mediante técnicas de modelado espacial avanzado
-                        </div>
-                        
-                        <div class="map-icon-container">
-                            <div class="map-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Visualización de mapas y análisis estadístico espacial</div>
-                        </div>
-                        
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-pdf">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
-                                </svg>
-                                Ver PDF
-                            </a>
-                            <a href="#" class="btn btn-code">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                                Código R
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <h3>📚 Estadística Espacial - EST334</h3>
-            <p><strong>Estudiante:</strong> Katia Daishy Ticona Casa</p>
-            <p><strong>Docente:</strong> TORRES CRUZ FRED</p>
-            <p><strong>Universidad Nacional del Altiplano - Puno</strong></p>
-            <p style="margin-top: 10px; opacity: 0.8;">2025 - Segundo Semestre</p>
-            <a href="https://github.com/katia-ticona/est334-estadistica-espacial" class="github-link" target="_blank">
-                📂 Ver Repositorio en GitHub
-            </a>
-        </footer>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>EST334 — Portafolio</h1>
+        <p class="subtitle">KATIA DAISHY TICONA CASA</p>
+      </div>
+      <nav class="nav">
+        <a href="#unidad-1">Unidad I</a>
+        <a href="#unidad-2">Unidad II</a>
+        <a href="README.md" target="_blank" rel="noopener">README</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <section id="unidad-1" class="unit">
+      <div class="unit-header">
+        <div class="date">10 Sept 2025</div>
+        <h2>I UNIDAD</h2>
+        <p class="lead">Fundamentos de Análisis Espacial</p>
+      </div>
+
+      <div class="grid-cards">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <!-- map pin svg -->
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+          </div>
+          <h3>Posicionamiento de Información</h3>
+          <p class="card-desc">Posicionamiento de una variable en la región de Puno.</p>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="unidad-1/Aplicacion_Autocorrelacion_Espacial/RESUMEN_DE_ARTICULOS.pdf" target="_blank" rel="noopener">Ver PDF</a>
+            <a class="btn" href="unidad-1/Aplicacion_Autocorrelacion_Espacial/RESUMEN_DE_ARTICULOS.pdf" download>Descargar</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zM7 9h14V7H7v2zM7 13h14v-2H7v2zM7 17h14v-2H7v2z"/></svg>
+          </div>
+          <h3>Muestreo Bootstrap</h3>
+          <p class="card-desc">Fragmento de código que realiza muestreo bootstrap con aleatoriedad.</p>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="unidad-1/Ejemplo_Muestreo_Bootstrap/Muestreo-por-Bootstrap.pdf" target="_blank" rel="noopener">Ver PDF</a>
+            <a class="btn" href="unidad-1/Ejemplo_Muestreo_Bootstrap/Muestreo-por-Bootstrap.pdf" download>Descargar</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </div>
+          <h3>Método Gaussian Random</h3>
+          <p class="card-desc">Análisis de una variable mediante Gaussian Random Fields.</p>
+          <div class="card-actions">
+            <!-- actúa solo si el pdf existe -->
+            <a class="btn btn-outline" href="unidad-1/Gaussian_Random_Fields/Analisis-Gaussian-Random.pdf" target="_blank" rel="noopener">Ver PDF</a>
+            <a class="btn" href="unidad-1/Gaussian_Random_Fields/Analisis-Gaussian-Random.pdf" download>Descargar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="unidad-2" class="unit small">
+      <div class="unit-header">
+        <h2>II UNIDAD</h2>
+        <p class="lead">Trabajo pendiente / enlaces adicionales</p>
+      </div>
+      <p>Coloca aquí los trabajos de la Unidad 2 siguiendo la estructura de tarjetas de arriba.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — KATIA DAISHY TICONA CASA · Curso EST334 · Universidad</p>
+    </div>
+  </footer>
 </body>
 </html>
