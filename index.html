@@ -5,171 +5,362 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Académico – Katia Ticona</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-content">
+        <div class="logo">
+          <span class="logo-icon">📊</span>
+          <span class="logo-text">Katia Ticona</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#perfil" class="nav-link">Perfil</a></li>
+          <li><a href="#unidad1" class="nav-link">Unidad I</a></li>
+          <li><a href="#unidad2" class="nav-link">Unidad II</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Estadística Espacial 2025</div>
+      <h1 class="hero-title">
+        <span class="gradient-text">Portafolio Académico</span>
+      </h1>
+      <p class="hero-subtitle">Análisis Espacial • Modelamiento Estadístico • Inferencia Territorial</p>
+      <a href="#perfil" class="hero-cta">
+        Explorar Trabajos
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
   <!-- ===== PERFIL ACADÉMICO ===== -->
-<section class="profile">
-  <div class="profile-grid">
+  <section class="profile" id="perfil">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Sobre Mí</span>
+        <h2 class="section-title">Perfil Académico</h2>
+      </div>
 
-    <div class="profile-card">
-      <h2>Perfil Académico</h2>
-      <p>
-        Mi nombre es <strong>Katia Daishy Ticona Casa</strong>, estudiante del
-        décimo semestre de la <strong>Facultad de Ingeniería Estadística e Informática</strong>
-        de la <strong>Universidad Nacional del Altiplano</strong>.
-      </p>
-      <p>
-        Mi formación está orientada al análisis de datos espaciales,
-        inferencia estadística y modelamiento espacial, con aplicación
-        en problemáticas territoriales y regionales.
-      </p>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="card-icon">👤</div>
+          <h3>Información Académica</h3>
+          <p>
+            Mi nombre es <strong>Katia Daishy Ticona Casa</strong>, estudiante del
+            décimo semestre de la <strong>Facultad de Ingeniería Estadística e Informática</strong>
+            de la <strong>Universidad Nacional del Altiplano</strong>.
+          </p>
+          <p>
+            Mi formación está orientada al análisis de datos espaciales,
+            inferencia estadística y modelamiento espacial, con aplicación
+            en problemáticas territoriales y regionales.
+          </p>
+        </div>
+
+        <div class="profile-card">
+          <div class="card-icon">📚</div>
+          <h3>Curso: Estadística Espacial</h3>
+          <p>
+            La <strong>Estadística Espacial</strong> es una rama de la estadística que
+            estudia fenómenos distribuidos en el espacio geográfico, considerando
+            la dependencia espacial y la autocorrelación entre observaciones.
+          </p>
+          <p>
+            Este curso aborda métodos de análisis exploratorio espacial,
+            matrices de pesos, autocorrelación global y local,
+            modelos espaciales y campos aleatorios gaussianos.
+          </p>
+          <div class="docente-tag">
+            <strong>Docente:</strong> [Nombre del docente]
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="profile-card">
-      <h2>Curso: Estadística Espacial</h2>
-      <p>
-        La <strong>Estadística Espacial</strong> es una rama de la estadística que
-        estudia fenómenos distribuidos en el espacio geográfico, considerando
-        la dependencia espacial y la autocorrelación entre observaciones.
-      </p>
-      <p>
-        Este curso aborda métodos de análisis exploratorio espacial,
-        matrices de pesos, autocorrelación global y local,
-        modelos espaciales y campos aleatorios gaussianos.
-      </p>
-      <p class="docente">
-        <strong>Docente:</strong> [Nombre del docente]
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
-  <main class="container">
-    
-    <!-- UNIDAD I -->
-    <section class="unit" id="unidad1">
-      <h2>🧭 Unidad I – Fundamentos de Análisis Espacial</h2>
+  <!-- ===== UNIDAD I ===== -->
+  <section class="unit" id="unidad1">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Unidad I</span>
+        <h2 class="section-title">🧭 Fundamentos de Análisis Espacial</h2>
+      </div>
 
       <div class="cards">
-
         <!-- Trabajo 1 -->
         <article class="card">
-          <h3>Posicionamiento de Información</h3>
-          <p>Visualización de una variable georreferenciada en la región de Puno.</p>
-          <div class="buttons">
-            <a href="unidad-1/Aplicacion_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Aplicacion_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">01</div>
+          <div class="card-content">
+            <h3>Posicionamiento de Información</h3>
+            <p>Visualización de una variable georreferenciada en la región de Puno.</p>
+            <div class="card-tags">
+              <span class="tag">Georreferenciación</span>
+              <span class="tag">Visualización</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Aplicacion_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Aplicacion_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
 
         <!-- Trabajo 2 -->
         <article class="card">
-          <h3>Muestreo Bootstrap</h3>
-          <p>Ejemplo de código que realiza muestreo aleatorio por método bootstrap.</p>
-          <div class="buttons">
-            <a href="unidad-1/Muestreo_Bootstrap/Muestreo-por-Bootstrap.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Muestreo_Bootstrap/Muestreo-por-Bootstrap.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">02</div>
+          <div class="card-content">
+            <h3>Muestreo Bootstrap</h3>
+            <p>Ejemplo de código que realiza muestreo aleatorio por método bootstrap.</p>
+            <div class="card-tags">
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Muestreo</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Muestreo_Bootstrap/Muestreo-por-Bootstrap.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Muestreo_Bootstrap/Muestreo-por-Bootstrap.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
 
         <!-- Trabajo 3 -->
         <article class="card">
-          <h3>Método Gaussian Random</h3>
-          <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
-          <div class="buttons">
-            <a href="unidad-1/Gaussian_Random_Fields/EJERCICIO_GAUSSIANO_ALEATORIO.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Gaussian_Random_Fields/EJERCICIO_GAUSSIANO_ALEATORIO.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">03</div>
+          <div class="card-content">
+            <h3>Método Gaussian Random</h3>
+            <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
+            <div class="card-tags">
+              <span class="tag">GRF</span>
+              <span class="tag">Análisis Espacial</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Gaussian_Random_Fields/EJERCICIO_GAUSSIANO_ALEATORIO.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Gaussian_Random_Fields/EJERCICIO_GAUSSIANO_ALEATORIO.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
 
         <!-- Trabajo 4 -->
         <article class="card">
-          <h3>Research Statement</h3>
-          <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
-          <div class="buttons">
-            <a href="unidad-1/Research_Statement/research_statement.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Research_Statement/research_statement.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">04</div>
+          <div class="card-content">
+            <h3>Research Statement</h3>
+            <p>Declaración de investigación académica y líneas de trabajo en estadística espacial.</p>
+            <div class="card-tags">
+              <span class="tag">Investigación</span>
+              <span class="tag">Académico</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Research_Statement/research_statement.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Research_Statement/research_statement.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
 
         <!-- Trabajo 5 -->
         <article class="card">
-          <h3>Aplicación de Autocorrelación Espacial</h3>
-          <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
-          <div class="buttons">
-            <a href="unidad-1/Aplicación_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Aplicación_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">05</div>
+          <div class="card-content">
+            <h3>Aplicación de Autocorrelación Espacial</h3>
+            <p>Estudio de patrones espaciales mediante índices de autocorrelación en datos regionales.</p>
+            <div class="card-tags">
+              <span class="tag">Autocorrelación</span>
+              <span class="tag">Patrones</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Aplicación_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Aplicación_Autocorrelación_Espacial/RESUMEN_DE_ARTICULOS.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
 
         <!-- Trabajo 6 -->
         <article class="card">
-          <h3>Matrices de Pesos, Moran, Geary y Hotspots</h3>
-          <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
-          <div class="buttons">
-            <a href="unidad-1/Matrices_Pesos_Moran_Geary_Hotspots/Matrices_de_Pesos__Moran_Geary_y_Hotspots.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Matrices_Pesos_Moran_Geary_Hotspots/Matrices_de_Pesos__Moran_Geary_y_Hotspots.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">06</div>
+          <div class="card-content">
+            <h3>Matrices de Pesos, Moran, Geary y Hotspots</h3>
+            <p>Análisis completo de dependencia espacial con métricas globales y locales.</p>
+            <div class="card-tags">
+              <span class="tag">Moran</span>
+              <span class="tag">Geary</span>
+              <span class="tag">Hotspots</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Matrices_Pesos_Moran_Geary_Hotspots/Matrices_de_Pesos__Moran_Geary_y_Hotspots.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Matrices_Pesos_Moran_Geary_Hotspots/Matrices_de_Pesos__Moran_Geary_y_Hotspots.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
 
         <!-- Trabajo 7 -->
         <article class="card">
-          <h3>Evidencia de paper</h3>
-          <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
-          <div class="buttons">
-            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" download class="btn download">Descargar</a>
-            <a href="unidad-1/Evidencia_Paper/Parallelized MCMC Sampling for Spatial Hierarchical Bayesian Models  Applied to Agricultural Land in Big Data  Agricultural Science.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Evidencia_Paper/Parallelized MCMC Sampling for Spatial Hierarchical Bayesian Models  Applied to Agricultural Land in Big Data  Agricultural Science.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">07</div>
+          <div class="card-content">
+            <h3>Evidencia de Paper</h3>
+            <p>Análisis y revisión de paper científico sobre MCMC en modelos espaciales jerárquicos.</p>
+            <div class="card-tags">
+              <span class="tag">MCMC</span>
+              <span class="tag">Bayesiano</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver Artículo</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Evidencia_Paper/Parallelized MCMC Sampling for Spatial Hierarchical Bayesian Models  Applied to Agricultural Land in Big Data  Agricultural Science.pdf" target="_blank" class="btn btn-secondary">
+              <span>Ver Paper Original</span>
+              <span class="btn-icon">→</span>
+            </a>
           </div>
         </article>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- UNIDAD II -->
-    <section class="unit" id="unidad2">
-      <h2>📊 Unidad II – Aplicaciones Avanzadas</h2>
+  <!-- ===== UNIDAD II ===== -->
+  <section class="unit unit-alt" id="unidad2">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Unidad II</span>
+        <h2 class="section-title">📊 Aplicaciones Avanzadas</h2>
+      </div>
 
       <div class="cards">
         <!-- Trabajo 1 -->
         <article class="card">
-          <h3>DataSets Espaciales</h3>
-          <p>Análisis espacial de una variable utilizando el método Gaussian Random Fields.</p>
-          <div class="buttons">
-            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" download class="btn download">Descargar</a>
-            <a href="unidad-1/Evidencia_Paper/Parallelized MCMC Sampling for Spatial Hierarchical Bayesian Models  Applied to Agricultural Land in Big Data  Agricultural Science.pdf" target="_blank" class="btn view">Ver PDF</a>
-            <a href="unidad-1/Evidencia_Paper/Parallelized MCMC Sampling for Spatial Hierarchical Bayesian Models  Applied to Agricultural Land in Big Data  Agricultural Science.pdf" download class="btn download">Descargar</a>
+          <div class="card-number">01</div>
+          <div class="card-content">
+            <h3>DataSets Espaciales</h3>
+            <p>Recopilación y análisis de conjuntos de datos espaciales aplicados a casos reales.</p>
+            <div class="card-tags">
+              <span class="tag">Datos</span>
+              <span class="tag">Aplicación</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" target="_blank" class="btn btn-primary">
+              <span>Ver PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="unidad-1/Evidencia_Paper/Articulo_MCMC.pdf" download class="btn btn-secondary">
+              <span>Descargar</span>
+              <span class="btn-icon">↓</span>
+            </a>
           </div>
         </article>
-
       </div>
-
-
-      
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2025 Katia Daishy Ticona Casa — Universidad Nacional del Altiplano</p>
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Katia Daishy Ticona Casa</h3>
+        <p>Facultad de Ingeniería Estadística e Informática</p>
+        <p>Universidad Nacional del Altiplano</p>
+      </div>
+      <div class="footer-copy">
+        <p>© 2025 Portafolio Académico — Estadística Espacial</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card, .profile-card, .section-header').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Active nav link
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('section[id]').forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
