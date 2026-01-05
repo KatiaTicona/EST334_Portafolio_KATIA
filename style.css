@@ -208,3 +208,49 @@ body {
   padding: 2.5rem;
   font-size: 0.85rem;
 }
+
+
+/* =====================================================
+   PERFIL ACADÉMICO
+===================================================== */
+
+.profile {
+  max-width: 1300px;
+  margin: -3rem auto 4rem auto;
+  padding: 0 6%;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.profile-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2.8rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-soft);
+}
+
+.profile-card h2 {
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  margin-bottom: 1.4rem;
+}
+
+.profile-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.profile-card .docente {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+
